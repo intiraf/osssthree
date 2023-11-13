@@ -26,7 +26,7 @@ public class Client {
         try (SocketChannel socketChannel = SocketChannel.open()) {
             socketChannel.connect(serverAddress);
 
-            Path filePath = Path.of("/home/oss/Downloads/yourfile.txt");
+            Path filePath = Path.of("/home/oss/Downloads/receive/yourfile.txt");
             FileChannel fileChannel = FileChannel.open(filePath, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
 
             // Zero Copy: Transfer file directly from socket channel to file channel
