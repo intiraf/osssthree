@@ -30,7 +30,7 @@ public class Server {
 
             while (true) {
                 try (SocketChannel socketChannel = serverSocketChannel.accept()) {
-                    Path filePath = Path.of("D:/os/receive/file.txt");
+                    Path filePath = Path.of("/home/m/Downloads/yourfile.txt");
                     FileChannel fileChannel = FileChannel.open(filePath, StandardOpenOption.READ);
 
                     // Zero Copy: Transfer file directly from file channel to socket channel
